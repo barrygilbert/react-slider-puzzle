@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import ControlBar from 'components/molecules/ControlBar';
-import PuzzleRow from 'components/molecules/PuzzleRow';
+import PuzzlePiece from 'components/atoms/PuzzlePiece';
 
 const PuzzleWrapper = styled.div`
   border: 5px solid #75576d;
@@ -16,6 +16,11 @@ const PuzzleWrapper = styled.div`
 const StyledControlBar = styled(ControlBar)`
   margin-bottom: 5px;
   color: #eee;
+`;
+
+const StyledRow = styled.div`
+  display: flex;
+  width: fit-content;
 `;
 
 export const transposeArray = (array) =>
@@ -177,11 +182,15 @@ export default class Puzzle extends React.Component {
           />
           {winner && <div>Winner!!!</div>}
           {puzzle.map(row => (
-            <PuzzleRow
-              pieces={row}
-              onClick={this.onPieceClick}
-              key={JSON.stringify(row)}
-            />
+            <StyledRow>
+              {row.map(piece => (
+                <PuzzlePiece
+                  piece={piece}
+                  onClick={this.onPieceClick}
+                  key={piece}
+                />
+              ))}
+            </StyledRow>
           ))}
         </PuzzleWrapper>
       </>
