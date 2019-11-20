@@ -8,8 +8,9 @@ export const StyledPiece = styled.button`
   text-align: center;
   line-height: 50px;
   font-size: 25px;
-  background: #ed537f;
-  border: 2px solid #694e56;
+  background: ${props => props.theme.backgroundB};
+  border: 2px solid ${props => props.theme.backgroundA};
+  color: ${props => props.theme.colorB};
   border-radius: 5px;
   cursor: ${({ disabled }) => disabled ? 'unset' : 'pointer'};
   margin: 1px;

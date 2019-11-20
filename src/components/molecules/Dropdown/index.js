@@ -12,8 +12,8 @@ const DropdownList = styled.ul`
   position: absolute;
   top: 0;
   padding: 5px;
-  background: #694e56;
-  border: 1px solid black;
+  background: ${props => props.theme.backgroundB};
+  border: 1px solid ${props => props.theme.colorB};
   box-shadow: 3px 3px 6px 2px rgba(0, 0, 0, 0.5);
 `;
 

@@ -5,17 +5,17 @@ import ControlBar from 'components/molecules/ControlBar';
 import PuzzlePiece from 'components/atoms/PuzzlePiece';
 
 const PuzzleWrapper = styled.div`
-  border: 5px solid #75576d;
+  padding: 7px 5px 5px;
   display: flex;
   flex-direction: column;
   width: fit-content;
   margin: 20px auto 0;
-  background: #694e56;
+  background: ${props => props.theme.backgroundA};
 `;
 
 const StyledControlBar = styled(ControlBar)`
   margin-bottom: 5px;
-  color: #eee;
+  color: ${props => props.theme.colorA};
 `;
 
 const StyledRow = styled.div`
