@@ -182,7 +182,7 @@ export default class Puzzle extends React.Component {
           />
           {winner && <div>Winner!!!</div>}
           {puzzle.map(row => (
-            <StyledRow>
+            <StyledRow key={row.join(',')}>
               {row.map(piece => (
                 <PuzzlePiece
                   piece={piece}
