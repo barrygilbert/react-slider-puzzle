@@ -9,14 +9,12 @@ const theme = {
   colorB: '#000000',
 };
 
-function App() {
-  return (
-    <ThemeProvider theme={theme}>
-      <div className="App">
-        <Puzzle defaultSize={4} />
-      </div>
-    </ThemeProvider>
-  );
-}
+const App = () => (
+  <ThemeProvider theme={theme}>
+    <div className="App">
+      <Puzzle defaultSize={4} />
+    </div>
+  </ThemeProvider>
+);
 
 export default App;
