@@ -80,9 +80,9 @@
     }
   },
   "eslintIgnore": [
-   "serviceWorker.js",
-   "localeData.js",
-   "oldLocaleData.js"
+    "serviceWorker.js",
+    "localeData.js",
+    "oldLocaleData.js"
   ],
   "browserslist": {
     "production": [
